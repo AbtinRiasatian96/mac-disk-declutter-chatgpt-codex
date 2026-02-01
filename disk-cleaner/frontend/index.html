@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Disk Cleaner</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header>
+        <div>
+          <h1>Disk Cleaner</h1>
+          <p>Identify safe-to-delete items and reclaim space with confidence.</p>
+        </div>
+        <button id="scan-btn">Scan</button>
+      </header>
+
+      <main>
+        <section class="results">
+          <div class="results-header">
+            <h2>Cleanup Opportunities</h2>
+            <div class="totals">
+              <span id="provider">Provider: --</span>
+              <span id="total-space">Space to free: 0 B</span>
+            </div>
+          </div>
+          <div class="table">
+            <div class="table-row table-header">
+              <span></span>
+              <span>Item</span>
+              <span>Size</span>
+              <span>Safety</span>
+              <span>Details</span>
+              <span></span>
+            </div>
+            <div id="results-body"></div>
+          </div>
+          <div class="actions">
+            <div class="delete-controls">
+              <select id="delete-mode">
+                <option value="trash">Move to Trash</option>
+                <option value="permanent">Delete Permanently</option>
+              </select>
+              <button id="delete-btn">Delete Selected</button>
+            </div>
+            <span id="status"></span>
+          </div>
+        </section>
+
+        <aside class="chat">
+          <h2>Chat Co-pilot</h2>
+          <div id="chat-history" class="chat-history"></div>
+          <div class="chat-input">
+            <textarea id="chat-message" placeholder="Ask about a folder or file..."></textarea>
+            <button id="chat-send">Send</button>
+          </div>
+        </aside>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

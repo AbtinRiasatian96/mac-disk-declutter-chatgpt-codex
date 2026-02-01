@@ -1,0 +1,3 @@
+flask
+requests
+send2trash
